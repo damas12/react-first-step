@@ -5,15 +5,15 @@ import ReactHtmlParser from 'react-html-parser';
 
 class Card extends React.Component {
     static propTypes = {
-        title: PropTypes.string,
+      title: PropTypes.string,
     }
 
     render() {
-        return (
-            <div className={styles.component}>
-                <h3>{ReactHtmlParser(this.props.title)}</h3>
-            </div>
-        )
+      return (
+        <div className={styles.component}>
+          <h3>{ReactHtmlParser(this.props.title)}</h3>
+        </div>
+      );
     }
 }
 

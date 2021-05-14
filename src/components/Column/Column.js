@@ -26,8 +26,8 @@ class Column extends React.Component {
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>{title} <span className={styles.icon}><Icon name={icon} /></span></h3>
-        {cards.map(({ key, ...cardProps }) => (
-          <Card key={key} {...cardProps} />
+        {cards.map(({ ...cardProps }) => (
+          <Card key={cardProps.id} {...cardProps} />
         ))}
         <div className={this.props.creatorClass}>
           <Creator text={this.props.creatorText} action={addCard} />

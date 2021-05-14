@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './Container.scss';
-
-const Container = () => (
+import PropTypes from 'prop-types';
+const Container = (props) => (
   <div className={styles.component}>
-    {this.props.children}
+    {props.children}
   </div>
-
 );
-
+Container.propTypes = {
+  children: PropTypes.node,
+};
 export default Container;

@@ -76,9 +76,21 @@ export const listData = {
 const lists = [
   {
     id: 'list-1',
-    title: 'Things to do <sup>soon!</sup>',
+    title: 'Things to do',
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  },
+  {
+    id: 'list-2',
+    title: ' Things to learn <sup>soon!</sup>',
+    description: 'Things I want to learn!',
+    image: 'https://i.imgur.com/yJ8pWHy.png',
+  },
+  {
+    id: 'list-3',
+    title: 'Some other list <sup>soon!</sup>',
+    description: `Other list don't know what for yet.`,
+    image: 'https://i.imgur.com/QdQBBm1.jpg',
   },
 ];
 
@@ -103,7 +115,43 @@ const columns = [
   },
   {
     id: 'column-4',
+    listId: 'list-1',
+    title: 'Strange column',
+    icon: 'question',
+  },
+  {
+    id: 'column-5',
     listId: 'list-2',
+    title: 'Programming languages',
+    icon: 'laptop-code',
+  },
+  {
+    id: 'column-6',
+    listId: 'list-2',
+    title: 'Languages',
+    icon: 'language',
+  },
+  {
+    id: 'column-7',
+    listId: 'list-2',
+    title: 'Strange column',
+    icon: 'question',
+  },
+  {
+    id: 'column-8',
+    listId: 'list-3',
+    title: 'Strange column',
+    icon: 'question',
+  },
+  {
+    id: 'column-9',
+    listId: 'list-3',
+    title: 'Strange column',
+    icon: 'question',
+  },
+  {
+    id: 'column-10',
+    listId: 'list-3',
     title: 'Strange column',
     icon: 'question',
   },

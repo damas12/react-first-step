@@ -4,6 +4,21 @@ export const getSearchString = state => state.searchString;
 export const countAllCards = ({ cards }) => cards.length;
 
 export const countVisibleCards = ({ cards, searchString }) => cards.filter(card => new RegExp(searchString, 'i').test(card.title)).length;
+
+export const getCardsForSearchResults = (state, searchString) =>
+  state.cards.filter((card) => searchString != '' &&
+    new RegExp(searchString, 'i').test(card.title) &&
+    state.columns.filter(column => {
+      if (column.id == card.columnId) {
+        card.columnTitle = column.title;
+        state.lists.filter(list => {
+          if (column.listId == list.id) {
+            card.listTitle = list.title;
+            card.listId = list.id;
+          }
+        });
+      }
+    }));
 // action name creator
 const reducerName = 'search';
 const createActionName = name => `app/${reducerName}/${name}`;
